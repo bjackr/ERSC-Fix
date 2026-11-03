@@ -1,0 +1,19 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "x64",
+      "displayName": "MSVC x64 (Visual Studio 2022)",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_POLICY_VERSION_MINIMUM": "3.5"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "debug", "displayName": "Debug", "configurePreset": "x64", "configuration": "Debug", "jobs": 32 },
+    { "name": "release", "displayName": "Release", "configurePreset": "x64", "configuration": "Release", "jobs": 32 }
+  ]
+}
